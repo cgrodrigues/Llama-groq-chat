@@ -17,7 +17,8 @@ def main():
 
     temperature=1.0
 
-    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+    # client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+    client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
     if "groq_model" not in st.session_state:
         st.session_state["groq_model"] = "llama3-70b-8192"
